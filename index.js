@@ -39,4 +39,4 @@ function ping() {
 
 //цкил
 ping();
-setInterval(ping, 600000);
+// setInterval(ping, 600000);
