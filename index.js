@@ -5,6 +5,17 @@ const db = require("./getDb.js");
 
 const q = fauna.query;
 
+const http = require("http");
+http
+  .createServer(function (req, res) {
+    console.log(`Just got a request at ${req.url}!`);
+    res.write("Yo!");
+    res.end();
+  })
+  .listen(process.env.PORT || 3000);
+
+const q = fauna.query;
+
 // db.query(
 //   q.Map(
 //     q.Paginate(q.Documents(q.Collection("online")), { size: 9999 }),
