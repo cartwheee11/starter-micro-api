@@ -14,8 +14,6 @@ http
   })
   .listen(process.env.PORT || 3000);
 
-const q = fauna.query;
-
 // db.query(
 //   q.Map(
 //     q.Paginate(q.Documents(q.Collection("online")), { size: 9999 }),
