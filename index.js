@@ -38,13 +38,14 @@ function ping() {
 }
 
 //цкил
-ping();
+
 // setInterval(ping, 600000);
 
 const http = require("http");
 http
   .createServer(function (req, res) {
     console.log(`Just got a request at ${req.url}!`);
+    ping();
     res.write("Yo!");
     res.end();
   })
